@@ -36,5 +36,22 @@ Approach 2 : Check for duplicates by marking the array elements as
 		return -1;
 	}
 
-** Note : The above mentioned Approach works when the array has 
-non-zero non-negative elements.
+** Note : The above mentioned Approach works when the array has non-zero non-negative elements.
+
+Approach 3: XOR   Time :: O(n) Space : O(n)
+Take the XOR of all array elements from 1 to n-1. Since the same elements will cancel out
+each other. We will be left with the Duplicate Element
+
+int findDuplicate(int a[], int n)
+{
+	int xor =0;
+	// take xor of all array elements
+	for(int i=0; i<n; i++)
+		xor^=a[i];
+
+	// take xor of nos. from 1 to n-1
+	for(int i=1; i<n; i++)
+		{ xor^=i; }
+	return xor;
+}
+
