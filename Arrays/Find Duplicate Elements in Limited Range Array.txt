@@ -1,0 +1,40 @@
+Find Duplicate Elements in a Limited Range Array
+
+Problem : Given a limited range array of size n containing elements between 1 and n-1 with one element repeating, find the duplicate number in it without using any extra space.
+
+For example,
+
+Input:  { 1, 2, 3, 4, 4 }
+Output: The duplicate element is 4
+ 
+ 
+Input:  { 1, 2, 3, 4, 2 }
+Output: The duplicate element is 2
+
+Approach 1 : Hashing :: Time O(n), Space O(n)
+
+Approach 2 : Check for duplicates by marking the array elements as 
+-ve by using array index as key
+
+	- Array contains all distinct elements but one
+	- This approach modifies the Array elements
+	- if a[i] is found => mark the value of a[a[i]-1] as -ve 
+	                       i.e. a[a[i]-1] => -a[a[i]-1]
+	- if a[i] is found again
+			-if (a[a[i]-1] is -ve) => the value is repeated
+
+	int findDuplicates(int a[])
+	{
+		for(int i=0; i<a.length; i++)
+		{
+		   int val = Math.abs(a[i]);
+		   if(a[val-1] > 0)
+		      a[val-1] = -1*a[val-1];
+		    else
+				return val;
+		}
+		return -1;
+	}
+
+** Note : The above mentioned Approach works when the array has 
+non-zero non-negative elements.
