@@ -55,3 +55,19 @@ int findDuplicate(int a[], int n)
 	return xor;
 }
 
+Approach 4: Time :: O(n) Space O(1)
+Find    the sum of all the array elements - n*(n-1)/2
+
+int findDuplicate(int a[])
+{
+	int sum =0;
+	for(int i=0; i<a.length; i++)
+		{ sum += a[i];}
+
+	int n = a.length; 
+	int expectedSum = n*(n-1)/2;
+	return n - expectedSum;
+}
+
+
+
