@@ -11,7 +11,7 @@ rotate 3 steps to the right: [5,6,7,1,2,3,4]
 
 Approach 1: Rotate the Array k times  Time :: O(k*n)
 
-Approach 2:
+Approach 2: Time:: O(n) Space :: O(1)
 
 - array :: {     1, 2, 3, 4,      5, 6, 7} k=3
 - array :: { Rev(1, 2, 3, 4), Rev(5, 6, 7)} k=3 => - { 4, 3, 2, 1, 7, 6, 5} k=3
