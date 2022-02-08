@@ -13,6 +13,13 @@ Example 2:
 Input: nums = [2,2,1,1,1,2,2]
 Output: 2
 
+This solution is called Boyer-Moore's Majority Vote Algorithm
+Approach or Idea::
+If an element appears more than n/2 times then it will occur
+    - atleast once consecutively (*_**_) [i.e. counting consecutive occurences >= 1]
+    - OR alternately (*_*_*) [i.e. last occurenece will always be of the Majority element]
+
+
  public int majorityElement(int[] nums) {
         
         int major =0, vote =1;
@@ -28,6 +35,8 @@ Output: 2
             }                
         }
         
+
+        // Verify once again if we have chosen the right element as the Majority element
         vote =0;
         for(int i=0; i<nums.length; i++)
         {
