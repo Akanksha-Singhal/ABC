@@ -18,7 +18,7 @@ Explanation : The maximum difference is between 9 and 7.
 Primary Application :: Maximum profit by buying and selling of share atmost once.
 
 
-Approach 1  :: maintain lmin   Time :: O(n) Space :: O(1)
+##### Approach 1  :: maintain lmin   Time :: O(n) Space :: O(1)
 
 ```java
 class Solution {
@@ -40,8 +40,7 @@ class Solution {
 
 
 
-Approach 2  :: maintain rmax
-
+##### Approach 2  :: maintain rmax
 
 a[i] =            {2, 7, 9, 5, 1, 3, 5}
 rmax[i]=          {9, 9, 9, 5, 5, 5, 5}
