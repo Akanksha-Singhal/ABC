@@ -1,7 +1,7 @@
-Maximum difference between two elements such that larger element appears after the smaller number
-Source :: https://leetcode.com/problems/maximum-difference-between-increasing-elements/
+## Maximum difference between two elements such that larger element appears after the smaller number
+#### Source :: https://leetcode.com/problems/maximum-difference-between-increasing-elements/
 
-
+```
 Given an array arr[] of integers, find out the maximum difference between any two elements such that larger element appears after the smaller number. 
 
 Examples : 
@@ -13,12 +13,14 @@ Explanation : The maximum difference is between 10 and 2.
 Input : arr = {7, 9, 5, 6, 3, 2}
 Output : 2
 Explanation : The maximum difference is between 9 and 7.
+```
 
 Primary Application :: Maximum profit by buying and selling of share atmost once.
 
 
 Approach 1  :: maintain lmin   Time :: O(n) Space :: O(1)
 
+```java
 class Solution {
     public int maximumDifference(int[] nums)
     {
@@ -34,16 +36,18 @@ class Solution {
         return diff;
     }
 }
-
+```
 
 
 
 Approach 2  :: maintain rmax
 
+
 a[i] =            {2, 7, 9, 5, 1, 3, 5}
 rmax[i]=          {9, 9, 9, 5, 5, 5, 5}
 rmax[i] - a[i] =  {7, 2, 0, 0, 4, 2, 0}
 
+```java
 int findMaxDiff(int a[], int n)
     {
 	    // Your code here	
@@ -68,3 +72,4 @@ int findMaxDiff(int a[], int n)
         return maxDiff;
 	    
     }
+```
