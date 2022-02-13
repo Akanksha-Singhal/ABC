@@ -50,8 +50,8 @@ rmax[i] - a[i] =  {7, 2, 0, 0, 4, 2, 0}
 ```java
 int findMaxDiff(int a[], int n)
     {
-	    // Your code here	
-	    int maxDiff = -1;
+	// Your code here	
+	int maxDiff = -1;
      
         // Initialize max element from right side
         int rmax = a[n-1];
