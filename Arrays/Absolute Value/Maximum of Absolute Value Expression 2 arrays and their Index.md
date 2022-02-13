@@ -40,11 +40,9 @@ class Solution {
         
         
         int n = arr1.length;
-        int maxVal1 = Integer.MIN_VALUE, maxVal2= Integer.MIN_VALUE, maxVal3= Integer.MIN_VALUE, maxVal4= Integer.MIN_VALUE;
-        
+        int maxVal1 = Integer.MIN_VALUE, maxVal2= Integer.MIN_VALUE, maxVal3= Integer.MIN_VALUE, maxVal4= Integer.MIN_VALUE;    
         int minVal1 = Integer.MAX_VALUE, minVal2= Integer.MAX_VALUE, minVal3= Integer.MAX_VALUE, minVal4= Integer.MAX_VALUE;
-        
-        
+    
         
         for(int i=0; i<n; i++)
         {
