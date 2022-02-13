@@ -15,7 +15,7 @@ Output : 2
 Explanation : The maximum difference is between 9 and 7.
 ```
 
-Primary Application :: Maximum profit by buying and selling of share atmost once.
+#### Primary Application :: Maximum profit by buying and selling of share atmost once.
 
 
 ##### Approach 1  :: maintain lmin   Time :: O(n) Space :: O(1)
