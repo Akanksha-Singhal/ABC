@@ -2,7 +2,8 @@
 #### Source :: https://leetcode.com/problems/maximum-difference-between-increasing-elements/
 
 ```
-Given an array arr[] of integers, find out the maximum difference between any two elements such that larger element appears after the smaller number. 
+Given an array arr[] of integers, find out the maximum difference between any two elements 
+such that larger element appears after the smaller number. 
 
 Examples : 
 
