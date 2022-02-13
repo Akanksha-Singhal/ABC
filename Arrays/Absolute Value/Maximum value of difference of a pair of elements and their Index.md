@@ -1,6 +1,6 @@
-# Maximum value of difference of a pair of elements and their Index 
+## Maximum value of difference of a pair of elements and their Index 
 
-### Source :: https://practice.geeksforgeeks.org/problems/maximum-value-of-difference-of-a-pair-of-elements-and-their-index/1
+#### Source :: https://practice.geeksforgeeks.org/problems/maximum-value-of-difference-of-a-pair-of-elements-and-their-index/1
 
 ```
 Given an array arr[] of N positive integers. Find maximum value of |arr[i] – arr[j]| + |i – j|, (0 <= i, j <= N – 1)
@@ -14,8 +14,7 @@ Output:
 4
 Explanation:
 Choosing i=0 and j=2, will result in
-|1-3|+|0-2| = 4, which is the maximum
-possible value.
+|1-3|+|0-2| = 4, which is the maximum possible value.
 ```
 
 Approach :: Time :: O(n) Space :: O(1)
