@@ -100,7 +100,7 @@ public class Solution {
         int minLength = Math.min(str1.length, str2.length); // compare their revisions in left-to-right order.
         for(; i<minLength; i++)
         {
-            // To compare 2 revisions as a String they should be of equal length, if not pad the shorter with zeros in the left
+            // To compare 2 revisions as a String they should be of equal length, if not pad the shorter one with zeros in the left
             int diffInLength = str1[i].length() - str2[i].length();
                         
             if(diffInLength<=0) // Revision2 is longer, pad Revision1 with zeros
@@ -108,7 +108,7 @@ public class Solution {
             else
                 str2[i] = padLeftZeros(str2[i], str1[i].length());
                 
-             // once the strings are equal compare them
+             // once the revisions are of equal length compare them as strings
             int comp = str1[i].compareTo(str2[i]);            
 
             if(comp >= 1)
