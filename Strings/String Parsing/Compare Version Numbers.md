@@ -44,6 +44,15 @@ Output: -1
 Explanation: version1's revision 0 is "0", while version2's revision 0 is "1". 0 < 1, so version1 < version2.
 ```
 
+###### Example 4
+``` 
+A : "3346237295"
+B : "898195413.2.6243"
+Output: 1 
+> Note : While comparing strings "898195413" >  "3346237295", but we have to compare them as numbers 
+
+```
+
 ```java
 public class Solution {
     
