@@ -102,21 +102,19 @@ public class Solution {
         {
             // To compare 2 revisions as a String they should be of equal length, if not pad the shorter with zeros in the left
             int diffInLength = str1[i].length() - str2[i].length();
-            
-            
+                        
             if(diffInLength<=0) // Revision2 is longer, pad Revision1 with zeros
                 str1[i] = padLeftZeros(str1[i], str2[i].length());
             else
                 str2[i] = padLeftZeros(str2[i], str1[i].length());
                 
-            int comp = str1[i].compareTo(str2[i]);
-            
+             // once the strings are equal compare them
+            int comp = str1[i].compareTo(str2[i]);            
 
-            if(comp>=1)
+            if(comp >= 1)
                 return 1;
-            else if(comp <=-1)
-                return -1;
-            
+            else if(comp <= -1)
+                return -1;            
         }
         
         
