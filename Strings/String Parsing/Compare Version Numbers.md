@@ -84,31 +84,31 @@ public class Solution {
     
     public int compareVersion(String version1, String version2) {
         
+        // Split all the revisions separated by "."
         String str1[] = version1.split("\\.");
         String str2[] = version2.split("\\.");
         
-        
+        // Remove Leading zeros from every version
         for(int i=0; i<str1.length; i++)
-            str1[i] = removeLeadingZeros( str1[i]);
+            str1[i] = removeLeadingZeros(str1[i]);
            
         
         for(int i=0; i<str2.length; i++)
-            str2[i]= removeLeadingZeros( str2[i]);
+            str2[i]= removeLeadingZeros(str2[i]);
         
         int i=0;
-        int minLength = Math.min(str1.length, str2.length);
+        int minLength = Math.min(str1.length, str2.length); // compare their revisions in left-to-right order.
         for(; i<minLength; i++)
         {
-            
+            // To compare 2 revisions as a String they should be of equal length, if not pad the shorter with zeros in the left
             int diffInLength = str1[i].length() - str2[i].length();
             
-
-            if(diffInLength<=0) // str2[i] is longer, pad str1[i] with zeros
+            
+            if(diffInLength<=0) // Revision2 is longer, pad Revision1 with zeros
                 str1[i] = padLeftZeros(str1[i], str2[i].length());
             else
                 str2[i] = padLeftZeros(str2[i], str1[i].length());
-            
-            
+                
             int comp = str1[i].compareTo(str2[i]);
             
 
