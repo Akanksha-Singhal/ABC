@@ -16,7 +16,38 @@
 			2. One or more digits.
 
 	2. (Optional) An 'e' or 'E', followed by an integer.
+    
 
+
+Approach :: Use Regex
+```java
+ public boolean isNumber(String s) {
+        
+          String Regex = "";
+          String digits = "[0-9]";
+          String optionalSign = "([+-]{0,1})";
+          String dot = "[\\.]";
+          
+          String atleastOneInteger = "("+optionalSign+"("+digits+"{1,20})"+")";
+          String atleastOneDigit = digits+"{1,20}";
+          
+          String digits_dot =  "("+atleastOneDigit+dot+")";
+                    
+          String digits_dot_digits =  "("+atleastOneDigit+dot+atleastOneDigit+")";
+          String dot_digits =  "("+dot+atleastOneDigit+")";
+
+          String decimal =  "("+optionalSign+"("+digits_dot+"|"+digits_dot_digits+"|"+dot_digits+")"+")";
+          
+          String part1= "("+decimal+"|"+atleastOneInteger+")";          
+          String part2 = "("+"([eE]"+atleastOneInteger+"){0,1}" +")";    
+          Regex = "("+part1+part2+")";
+          
+         // System.out.println(Regex);
+          
+          return Pattern.matches(Regex, s);    
+        
+    }
+```
 
 
 Approach :: Split around the decimal
