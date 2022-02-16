@@ -21,18 +21,17 @@
 
 Approach :: Use Regex
 ```java
- public boolean isNumber(String s) {
+ public boolean isNumber(String s) {  
         
           String Regex = "";
           String digits = "[0-9]";
           String optionalSign = "([+-]{0,1})";
           String dot = "[\\.]";
+          String atleastOneDigit = "("+digits+"{1,20}"+")";
           
-          String atleastOneInteger = "("+optionalSign+"("+digits+"{1,20})"+")";
-          String atleastOneDigit = digits+"{1,20}";
+          String atleastOneInteger = "("+optionalSign+atleastOneDigit+")";
           
-          String digits_dot =  "("+atleastOneDigit+dot+")";
-                    
+          String digits_dot =  "("+atleastOneDigit+dot+")";          
           String digits_dot_digits =  "("+atleastOneDigit+dot+atleastOneDigit+")";
           String dot_digits =  "("+dot+atleastOneDigit+")";
 
@@ -44,7 +43,7 @@ Approach :: Use Regex
           
          // System.out.println(Regex);
           
-          return Pattern.matches(Regex, s);    
+          return Pattern.matches(Regex, s);   
         
     }
 ```
