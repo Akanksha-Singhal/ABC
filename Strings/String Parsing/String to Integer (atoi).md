@@ -32,6 +32,7 @@ Implement the myAtoi(string s) function, which converts a string to a 32-bit sig
 Approach :: Time :: O(n)  Space:: O(1)
 
 Algorithm is already mentioned
+```
 - trim white spaces
 - read the sign, num = 1
 - read the digit 
@@ -43,8 +44,7 @@ Algorithm is already mentioned
 
         Similarly for underflow also 
  - num = num*10 + digit
-
-
+ ```
 
 ```java
 class Solution {
