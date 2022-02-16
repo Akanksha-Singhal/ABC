@@ -6,9 +6,6 @@ The algorithm for myAtoi(string s) is as follows:
 
 * A valid number can be split up into these components (in order):
 	1. Read in and ignore any leading whitespace.
-		* An integer can be split up into these components (in order):
-			1. (Optional) A sign character (either '+' or '-').
-			2. One or more digits.
 
 	2. Check if the next character (if not already at the end of the string) is '-' or '+'.
 			1.  Read this character in if it is either. 
@@ -19,8 +16,8 @@ The algorithm for myAtoi(string s) is as follows:
 
 	4. Convert these digits into an integer (i.e. "123" -> 123, "0032" -> 32).
 		1. If no digits were read, then the integer is 0. Change the sign as necessary (from step 2).
-		2. If the integer is out of the 32-bit signed integer range [-2^31, 231 - 1], then clamp the integer so that it remains in the range. 
-Specifically, integers less than -2^31 should be clamped to -231, and integers greater than 231 - 1 should be clamped to 231 - 1.
+		2. If the integer is out of the 32-bit signed integer range [-2^31, 2^31 - 1], then clamp the integer so that it remains in the range. 
+Specifically, integers less than -2^31 should be clamped to -2^31, and integers greater than 2^31 - 1 should be clamped to 231 - 1.
 
 	5. Return the integer as the final result.
 
