@@ -8,8 +8,8 @@ Implement the myAtoi(string s) function, which converts a string to a 32-bit sig
 	1. Read in and ignore any leading whitespace.
 
 	2. Check if the next character (if not already at the end of the string) is '-' or '+'.  
-			1.  Read this character in if it is either. 
-			2.	This determines if the final result is negative or positive respectively. Assume the result is positive if neither is present.
+			*  Read this character in if it is either. 
+			*  This determines if the final result is negative or positive respectively. Assume the result is positive if neither is present.
 
 		
 	3. Read in next the characters until the next non-digit character or the end of the input is reached. The rest of the string is ignored.
