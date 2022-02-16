@@ -4,8 +4,6 @@
 
 * A valid number can be split up into these components (in order):
 	1. A decimal number or an integer.
-	2. (Optional) An 'e' or 'E', followed by an integer.
-
 		* A decimal number can be split up into these components (in order):
 			1. (Optional) A sign character (either '+' or '-').
 			2. One of the following formats:
@@ -16,3 +14,5 @@
 		* An integer can be split up into these components (in order):
 			1. (Optional) A sign character (either '+' or '-').
 			2. One or more digits.
+
+	2. (Optional) An 'e' or 'E', followed by an integer.
