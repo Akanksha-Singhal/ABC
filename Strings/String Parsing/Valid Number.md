@@ -49,87 +49,117 @@ Approach :: Use Regex
 ```
 
 
-Approach :: Split around the decimal
+Approach :: Split around the "E"
 
 ```java
 class Solution {
     
     
-    public boolean checkE(String s)
+    public boolean checkAtleastOneDigit(String num)
     {
-       char ch[] = s.toCharArray();
-         int countE=0; 
+        char ch[] = num.toCharArray();
+        if(ch.length==0)
+            return false;
+        
         for(int i=0; i<ch.length; i++)
         {
-            if(ch[i]=='e' || ch[i]=='E')
-            {
-                countE++;
-                if(i==0 || i== ch.length-1)
-                    return false;     
-                if(ch[i-1]=='.' && i==1) //".e1"
-                    return false;
-
-            }
-            if(ch[i]=='.' && countE==1)  // "99e2.5"
-                  return false;
-            if(countE > 1)
-                return false;            
+            if(!(ch[i]>='0' && ch[i]<='9'))
+                return false;
         }
         return true;
     }
     
-    
-  public boolean count_Period(String s)
+    public boolean checkOptionalSign(String num)
     {
-        char ch[] = s.toCharArray();
-        int countDot=0; 
+        char ch[] = num.toCharArray();
+        if(ch.length>1)
+            return false;
         for(int i=0; i<ch.length; i++)
         {
-            if(ch[i]=='.' )
-                 countDot++;            
-        }
-        if(countDot>1)
-            return false;     
-      return true;
-    }
-    
-    
-    public boolean checkForNumeric(String s)
-    {
-        //System.out.println(s);
-        char ch[] = s.toCharArray();
-        int countE=0, countSign = 0;
-        for(int i=0; i<ch.length; i++)
-        {
-            if((ch[i]>='0' && ch[i]<='9'))
-                continue;
-            else if(ch[i]=='e' || ch[i]=='E')
-                continue;
-            else if( (ch[i]=='+'||ch[i]=='-') && i!=0 && i!=ch.length-1 && (ch[i-1]=='e'||ch[i]=='E') && countSign < 1)
-                { countSign++; continue; }             
-            else 
-              return false;
+            if(!(ch[i]=='+'||ch[i]=='-'))
+                return false;
         }
         return true;
     }
-    public boolean isNumber(String s) {
+    
+    public boolean checkAtleastOneInteger(String num)
+    {
+        char ch[] = num.toCharArray();
+        if(ch.length==0)
+                return false;
         
-        // check if first char is '+' or '-'
-        
-        if(s.charAt(0)=='+'||s.charAt(0)=='-')
-            s = s.substring(1, s.length());
-        
-        // Split the decimal and fractional part separated by "."
-        String nums[] = s.split("\\.");  
+        String sign = num.substring(0, 1);
+        boolean isFirstCharSign = checkOptionalSign(sign);
 
+        if(isFirstCharSign)
+            num = num.substring(1, num.length());
         
-        if(nums.length>2 || nums.length==0)
-            return false;
-        if(!count_Period(s) || !checkE(s))  //""0..""
-            return false;
-
-        return checkForNumeric(nums[0]) && ( (nums.length==1) || (nums.length==2 && checkForNumeric(nums[1])));
+        boolean atleastOneDigit = checkAtleastOneDigit(num);
+        return atleastOneDigit;
         
     }
+    
+    
+    public boolean checkDecimalDots(String num)
+    {
+        char ch[] = num.toCharArray();
+        if(ch.length==0)
+                return false;
+        
+        String sign = num.substring(0, 1);
+        boolean isFirstCharSign = checkOptionalSign(sign);
+
+        if(isFirstCharSign)
+            num = num.substring(1, num.length());
+        
+        if(num.length()==0)
+            return false;
+        
+        if(num.charAt(num.length()-1)=='.')
+        {
+              num = num.substring(0, num.length()-1);
+              return checkAtleastOneDigit(num);
+        }
+        else if(num.charAt(0)=='.')
+        {
+             num = num.substring(1, num.length());
+             return checkAtleastOneDigit(num);
+        }
+        else
+        {
+            String[] nums = num.split("\\.");
+            if(nums.length!=2)
+                return false;
+            return checkAtleastOneDigit(nums[0]) && checkAtleastOneDigit(nums[1]);
+        }
+    }
+    
+    boolean checkPart1(String num)
+    {
+        return checkAtleastOneInteger(num)||checkDecimalDots(num);
+    }
+    
+    boolean checkValidNumber(String num)
+    {
+          if(num.length()==0)
+              return true;
+         int indexOfE =num.indexOf('e');
+         if(indexOfE==-1)
+             indexOfE =num.indexOf('E');
+         
+         if(indexOfE==-1)
+             return checkPart1(num.substring(0, num.length()));       
+         
+         String half1= num.substring(0, indexOfE);
+         String half2= num.substring(indexOfE+1, num.length());
+        
+        return  checkPart1(half1) && checkAtleastOneInteger(half2);
+    }
+    
+    
+     public boolean isNumber(String num) 
+     {                   
+         return  checkValidNumber(new String(num));
+     }
 }
 ```
