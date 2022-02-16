@@ -1,5 +1,7 @@
 ### String to Integer (atoi)
 
+#### Source:: https://leetcode.com/problems/string-to-integer-atoi/solution/
+
 Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer (similar to C/C++'s atoi function).
 
 
@@ -25,3 +27,76 @@ Implement the myAtoi(string s) function, which converts a string to a 32-bit sig
 > Note:
 > Only the space character ' ' is considered a whitespace character.
 > Do not ignore any characters other than the leading whitespace or the rest of the string after the digits.
+
+
+Approach :: Time :: O(n)  Space:: O(1)
+
+Algorithm is already mentioned
+- trim white spaces
+- read the sign, num = 1
+- read the digit 
+
+    - Take care that num should not be greater > (Integer.MAX_VALUE  = 2147483647)
+        - Case 1 : num == 2147483647, dont add the digit, return 2147483647
+        - Case 2 : (num/10) < (2147483647/10), add any digit to num , result < 2147483647
+        - Case 3 : (num/10) = (2147483647/10), add only 0-7 , result <= 2147483647, else for digits 8-9 return  2147483647;
+
+        Similarly for underflow also 
+ - num = num*10 + digit
+
+
+
+```java
+class Solution {
+    
+    public boolean checkDigit(char c)
+    {
+        if(c>='0' && c<='9')
+            return true;
+        return false;
+    }
+    public int myAtoi(String s) {
+        
+        int sign = 1;                
+        int i=0;
+        
+        // trim all the white spaces
+        while(i< s.length() && s.charAt(i)==' ')
+            i++;
+
+        if(i== s.length())
+            return 0;
+        
+        char ch[] = s.toCharArray(); // avoid creating this array for O(1) space solution
+
+        //check for the sign
+        if(ch[i]=='+'||ch[i]=='-')
+        {
+            if(ch[i]=='-')
+                sign = -1;
+            i++;
+        }
+        
+        int num =0;
+        
+        while(i < s.length() && checkDigit(s.charAt(i)))
+        {
+            char c = s.charAt(i);
+            int digit = (c-'0'); 
+            
+             // Check overflow and underflow conditions. 
+            if ((num > Integer.MAX_VALUE / 10) || 
+                (num == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {     
+                // If integer overflowed return 2^31-1, otherwise if underflowed return -2^31.    
+                return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+            }
+            
+            num  = num*10 + digit;    
+            i++;
+        }
+        num = num*sign;
+        return num;                 
+        
+    }
+}
+```
