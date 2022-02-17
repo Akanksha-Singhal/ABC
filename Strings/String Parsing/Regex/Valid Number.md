@@ -28,9 +28,8 @@ Decimal with e with (signed integral power) - "53.5e93", "123.456e789", "46.e3",
 
 Invalid Numbers:
 Alphabets - "abc", "1a", "95a54e53"
-e is not in middle - "1e", "e3"
 fractional powers - "99e2.5"
-Base or power not defined - "4e+", ".e1"
+Base or power not defined - "4e+", ".e1", "1e", "e3"
 More than 1 sign or decimal - "--6", "-+3", "0.."
 ```
 
