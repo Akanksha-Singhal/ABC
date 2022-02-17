@@ -18,6 +18,21 @@
 	2. (Optional) An 'e' or 'E', followed by an integer.
     
 
+```
+Valid Numbers :
+integer - "2", "0089" 
+decimal - "0.1", "3.14", "4.", ".9"
+Integer with e ( unsigned power) - "2e10", "90E3"
+Integer with e with (signed integral power) - "3e+7", "6e-1"
+Decimal with e with (signed integral power) - "53.5e93", "123.456e789", "46.e3", "-1."
+
+Invalid Numbers:
+Alphabets - "abc", "1a", "95a54e53"
+e is not in middle - "1e", "e3"
+fractional powers - "99e2.5"
+Base or power not defined - "4e+", ".e1"
+More than 1 sign or decimal - "--6", "-+3", "0.."
+```
 
 Approach :: Use Regex
 ```java
@@ -47,6 +62,7 @@ Approach :: Use Regex
         
     }
 ```
+
 
 
 Approach :: Split around the "E"
