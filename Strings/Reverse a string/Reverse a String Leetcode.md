@@ -1,6 +1,6 @@
-Reverse a string
+## Reverse a string
 
-Source:: https://leetcode.com/problems/reverse-string/
+#### Source:: https://leetcode.com/problems/reverse-string/
 
 Write a function that reverses a string. The input string is given as an array of characters s.
 
