@@ -3,7 +3,7 @@
 #### Source :: https://leetcode.com/problems/reverse-words-in-a-string/
 #### Source :: https://www.interviewbit.com/problems/reverse-the-string/
 
-Approach 1 :: Split and Reverse :: O(n) Space :: O(1) 
+Approach 1 :: Split and Reverse :: O(n) Space :: O(n) 
  - Split the string with white spaces and store it in an array
  - Reverse the array
 
