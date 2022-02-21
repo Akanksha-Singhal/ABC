@@ -58,7 +58,7 @@ Approach 1 :: Split and Reverse :: O(n) Space :: O(n)
  ```
 
 
-Approach 2 :: Two Pointer Time :: O(n) Space :: O(1) 
+Approach 2 :: Two Pointer       Time :: O(n) Space :: O(1) 
 ```java
 class Solution {
     
