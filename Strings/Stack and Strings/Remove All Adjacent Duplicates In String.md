@@ -11,7 +11,7 @@ Return the final string after all such duplicate removals have been made. It can
 
 Example 1:
 
-Input: s = "abbaca"
+Input: s = "abbaca"  
 Output: "ca"
 
 Explanation: 
@@ -20,7 +20,7 @@ he result of this move is that the string is "aaca", of which only "aa" is possi
 
 Example 2:
 
-Input: s = "azxxzy"
+Input: s = "azxxzy"  
 Output: "a
 
 
