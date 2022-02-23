@@ -31,6 +31,7 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 class Solution {
     public int lengthOfLongestSubstring(String s) {
         HashMap<Character, Integer> hm = new HashMap<Character, Integer>();
+        // Map Character and the last Index At which the character occured
         char ch[] = s.toCharArray();
         int maxLength =0;
         int lastindex = 0;
