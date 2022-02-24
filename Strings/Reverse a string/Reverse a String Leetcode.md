@@ -7,6 +7,7 @@ Write a function that reverses a string. The input string is given as an array o
 You must do this by modifying the input array in-place with O(1) extra memory.
 
  
+Approach :: Time :: O(n/2) Space :: O(1)
 ```java
 class Solution {
     public void reverseString(char[] s) {
