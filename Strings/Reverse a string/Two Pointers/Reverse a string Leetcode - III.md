@@ -17,6 +17,8 @@ Input: s = "God Ding"
 Output: "doG gniD"
 ```
 
+Time :: O(n) Space :: O(1)
+
 ```java
 class Solution {
     
