@@ -3,6 +3,33 @@
 #### Source :: https://leetcode.com/problems/reverse-words-in-a-string/
 #### Source :: https://www.interviewbit.com/problems/reverse-the-string/
 
+
+Given an input string s, reverse the order of the words.
+A word is defined as a sequence of non-space characters. The words in s will be separated by at least one space.
+Return a string of the words in reverse order concatenated by a single space.
+Note that s may contain leading or trailing spaces or multiple spaces between two words. 
+The returned string should only have a single space separating the words. Do not include any extra spaces.
+
+
+
+Example 1:
+```
+Input: s = "the sky is blue"
+Output: "blue is sky the"
+```
+Example 2:
+```
+Input: s = "  hello world  "
+Output: "world hello"
+Explanation: Your reversed string should not contain leading or trailing spaces.
+```
+Example 3:
+```
+Input: s = "a good   example"
+Output: "example good a"
+Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.
+```
+
 Approach 1 :: Split and Reverse :: O(n) Space :: O(n) 
  - Split the string with white spaces and store it in an array
  - Reverse the array
@@ -92,19 +119,24 @@ class Solution {
         String firstHalf="", secondHalf="";
         while(i<=j)
         {
+            // skip white spaces from start
             while(i<n && ch[i]==' ')
                 i++;
             
+            // skip white spaces from end
             while(j>=0 && ch[j]==' ')
                 j--;
             
-            int start_i = i;
-            int end_j = j;
             
+            int start_i = i; // set the starting of the (word in beg)
+            int end_j = j;   // set the ending of the (word in end)
+            
+            // get the end of the (word in beg)
             while(i<n && ch[i]!=' ')
                 i++;
             
-             while(j>=0 && ch[j]!=' ')
+            // set the ending of the (word in end)
+            while(j>=0 && ch[j]!=' ')
                 j--;
             
 
