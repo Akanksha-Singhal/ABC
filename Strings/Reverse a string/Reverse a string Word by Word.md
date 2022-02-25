@@ -16,15 +16,20 @@ Approach 1 :: Split and Reverse :: O(n) Space :: O(n)
          int n = str.length();
          for(int i=0; i<n;)
          {
+            //skip all white spaces 
             while(i<n && str.charAt(i)==' ')
                 i++;
+
+            // reach till the end of the word
             int start = i;
             while(i<n && str.charAt(i)!=' ')
                             i++;
+
+            // get the word i.e. substring from start to end
             if(start < n && str.charAt(start)!=' ')
                {
                    splitstr = str.substring(start, i);
-                    l.add(splitstr);
+                   l.add(splitstr);
                } 
          }
 
