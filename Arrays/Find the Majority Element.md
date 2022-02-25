@@ -1,4 +1,4 @@
-## Majority Element
+## Majority Element (>N/2)
 #### Source :: https://leetcode.com/problems/majority-element/
 
 Given an array nums of size n, return the majority element.
