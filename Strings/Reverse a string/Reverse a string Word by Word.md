@@ -135,7 +135,7 @@ class Solution {
             while(i<n && ch[i]!=' ')
                 i++;
             
-            // set the ending of the (word in end)
+            // set the beg of the (word in end)
             while(j>=0 && ch[j]!=' ')
                 j--;
             
