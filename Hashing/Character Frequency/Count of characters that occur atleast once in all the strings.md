@@ -1,4 +1,4 @@
-Star Character  
+## Star Character  
 
 There is a collection of strings stored in an array. 
 He wants to know the count of Star Characters present in the collection. 
