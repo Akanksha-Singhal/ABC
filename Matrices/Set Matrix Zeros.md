@@ -19,9 +19,7 @@ Output:
  [0,0,0],  
  [1,0,1]]
  ```
-
-
- Input: matrix = 
+Input: matrix = 
  ```
  [[0,1,2,0],  
   [3,4,5,2],  
@@ -36,7 +34,8 @@ Output:
 
 
 #### Approach 1 :: Brute Force  
-Time :: O((n*m)*(n+m)) 
+Time :: O((n*m)*(n+m))  
+Space :: O(1)
 
 - Traverse the whole matrix
 	- If you encounter a 0
@@ -45,3 +44,21 @@ Time :: O((n*m)*(n+m))
 
 - Once the entire matrix has been traversed 
 - Traverse the whole matrix and Change -1 to 0
+
+#### Approach 2 :: Optimized Approach :: Better Solution
+Time :: O(n*m + n*m) = O(n*m)
+Space :: O(n) + O(m) 
+
+- Take 2 dummy arrays (1st array - size of columns, 2nd array - size of rows )  
+- Traverse the whole matrix
+	- If you encounter a 0 at ( r, c)
+		- dummy_row[r] = -1
+		- dummy_col[r] = -1
+
+- Traverse the Matrix
+	- for (r, c) if the dummy_row[r] == -1 || dummy_col[r] == -1
+		- mark (r, c) in the matrix as 0
+
+
+
+
