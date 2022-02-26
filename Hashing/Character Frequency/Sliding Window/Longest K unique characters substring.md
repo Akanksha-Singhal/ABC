@@ -32,10 +32,13 @@ int longestSubstrWithKUnique(String S, int k){
         int ws = 0, we=0;
        
         for(we=0;we<ch.length;we++) 
-        {	hm.put(ch[we], hm.getOrDefault(ch[we], 0)+1); 
+        {	// increase the freqency of the current character
+            hm.put(ch[we], hm.getOrDefault(ch[we], 0)+1); 
+
+            // as soon as the no of Characters are more than k
         	while(hm.size()> k) 
         	{
-        	    // dec the freq of ws char till one of the elements reaches a 0 frequency
+        	    // dec the freq of ws char  till one of the elements reaches a 0 frequency
         	    //and move the window forward
         	    
         		hm.put(ch[ws], hm.get(ch[ws])-1);
@@ -43,6 +46,8 @@ int longestSubstrWithKUnique(String S, int k){
         			hm.remove(ch[ws]);
         		ws++;
         	}
+            
+            //
         	maxlen = hm.size() == k ? Math.max(maxlen , we-ws+1) : maxlen ;
         }
         return maxlen;

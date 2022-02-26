@@ -53,12 +53,42 @@ Space :: O(n) + O(m)
 - Traverse the whole matrix
 	- If you encounter a 0 at ( r, c)
 		- dummy_row[r] = -1
-		- dummy_col[r] = -1
+		- dummy_col[c] = -1
 
 - Traverse the Matrix
-	- for (r, c) if the dummy_row[r] == -1 || dummy_col[r] == -1
+	- for (r, c) if the dummy_row[r] == -1 || dummy_col[c] == -1
 		- mark (r, c) in the matrix as 0
 
+#### Approach 3 :: Optimized Approach :: Optimal Solution
+
+Time :: O(n*m + n*m) = O(n*m)
+Space :: O(1)
+
+- Create 2 dummy arrays inside the 2-d matrix 
+	- (1st row - Column dummy matrix)
+	- (1st col - Row dummy matrix)
+
+
+- Boolean var :: no_zeros_in_dummy_col = true
+- Traverse the whole matrix
+	- If you encounter a 0 at ( r, c) 
+		- if c!=0 
+			- dummy_row[r] = 0
+			- dummy_col[c] = 0
+		- if c==0
+			- no_zeros_in_dummy_col = false // do not make any changes in dummy_row
+
+
+// Since we do not want to start from row1 i.e. dummy_row, we start from back
+// 
+- Backwards Traverse the whole matrix
+	- for (r, c) 
+		- if the (dummy_row[r] == 0 || dummy_col[c] == 0) && c>=1
+			- mark (r, c) in the matrix as 0
+		- if no_zeros_in_dummy_col = true
+			- mark (r, c) in the matrix as 0
+		
+	- if r==0
 
 
 
