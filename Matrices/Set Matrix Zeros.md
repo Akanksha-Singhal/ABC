@@ -3,8 +3,8 @@
 Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.
 You must do it in place.
 
-Source :: https://leetcode.com/problems/set-matrix-zeroes/
- https://www.youtube.com/watch?v=M65xBewcqcI&list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&index=8
+#### Source :: https://leetcode.com/problems/set-matrix-zeroes/  
+#### Explaination ::  https://www.youtube.com/watch?v=M65xBewcqcI&list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&index=8
 
 Input: matrix = 
 ```
@@ -35,7 +35,7 @@ Output:
 ```
 
 
-Approach 1 :: Brute Force  
+#### Approach 1 :: Brute Force  
 Time :: O((n*m)*(n+m)) 
 
 - Traverse the whole matrix
