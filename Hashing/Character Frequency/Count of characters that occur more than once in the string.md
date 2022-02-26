@@ -6,8 +6,6 @@ Given a string S  which contains the first letter of all the student names in he
 Find out the count of characters that occur more than once in the string.
 
 
-
-
 Output format
 For each test case on a new line, print the output in the format character=count. 
 If multiple characters have more than one count, print all of them separated by space, in alphabetical order.
