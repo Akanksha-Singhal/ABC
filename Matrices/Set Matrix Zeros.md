@@ -59,7 +59,7 @@ Space :: O(n) + O(m)
 	- for (r, c) if the dummy_row[r] == -1 || dummy_col[c] == -1
 		- mark (r, c) in the matrix as 0
 
-#### Approach 3 :: Optimized Approach :: Optimal Solution
+#### Approach 3 :: Optimized Approach :: Optimal Solution :: Constant Space Solution
 
 Time :: O(n*m + n*m) = O(n*m)
 Space :: O(1)
@@ -67,6 +67,9 @@ Space :: O(1)
 - Create 2 dummy arrays inside the 2-d matrix 
 	- (1st row - Column dummy matrix)
 	- (1st col - Row dummy matrix)
+
+![alt text](https://github.com/[Akanksha-Singhal]/[ABC]/blob/[master]/image.jpg?raw=true)
+
 
 
 - Boolean var :: no_zeros_in_dummy_col = true
@@ -91,4 +94,52 @@ Space :: O(1)
 	- if r==0
 
 
+```java
+class Solution {
+    public void setZeroes(int[][] matrix) {
+        
+        int rows = matrix.length; int cols = matrix[0].length;        
+        boolean no_zeros_in_dummy_col = true;  
+        
+        
+         for(int r=0; r<rows; r++)
+            if(matrix[r][0]==0)
+                no_zeros_in_dummy_col = false;
+        
+        //to mark 0s in the first row _dummy_row
+        
+         /* Note in dummy cols & rows -> matrix[0][0] is an intersection 
+             * assume it has no effect on first rows and if it zero then record
+              and no_zeros_in_dummy_col var will take care of effect on first column */
+        for(int c=1; c<cols; c++)
+            if(matrix[0][c]==0)
+                matrix[0][0]=0;      
+        
+        for(int r=1; r<rows; r++)
+        {
+            for(int c=1; c<cols; c++)
+                if(matrix[r][c]==0)   //dummy_row[c]=0 and dummy_col[r]=0 i.e. 
+                    matrix[0][c] =matrix[r][0] = 0;                  
+        }
 
+        for(int r=rows-1; r>=1; r--)
+        {
+            for(int c=cols-1; c>=1; c--)
+            {
+                if(matrix[0][c] == 0 ||  matrix[r][0] == 0)
+                    matrix[r][c] = 0;              
+            }
+        }        
+        
+         for(int c=cols-1; c>=0; c--)
+              if(matrix[0][0] == 0)
+                   matrix[0][c] = 0; 
+        
+        if(no_zeros_in_dummy_col == false)  // set dummy_col = 0
+            for(int r=rows-1; r>=0; r--)
+                matrix[r][0] = 0; 
+        
+    }
+}
+
+```
