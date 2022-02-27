@@ -68,9 +68,7 @@ Space :: O(1)
 	- (1st row - Column dummy matrix)
 	- (1st col - Row dummy matrix)
 
-![alt text](https://github.com/[Akanksha-Singhal]/[ABC]/blob/[master]/image.jpg?raw=true)
-
-
+<img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/set_matrix_zeros.jpeg" width="100" height="100">
 
 - Boolean var :: no_zeros_in_dummy_col = true
 - Traverse the whole matrix (r-> [0, m-1], c->[0, n-1])
