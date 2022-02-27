@@ -80,9 +80,9 @@ Space :: O(1)
 			- no_zeros_in_dummy_col = false // do not make any changes in dummy_row
 
 
-// Since we do not want to modify our dummy_row array i.e. row1 , we start from back
-// 
-- Backwards Traverse the whole matrix  (r-> [m-1, 0], c->[n-1, 0])
+##### Since we do not want to modify our dummy_row array i.e. row1 , we start from back
+
+#### - Backwards Traverse the whole matrix  (r-> [m-1, 0], c->[n-1, 0])
 	- for (r, c) 
 		- if the (dummy_row[r] == 0 || dummy_col[c] == 0) && c>=1
 			- mark (r, c) in the matrix as 0
