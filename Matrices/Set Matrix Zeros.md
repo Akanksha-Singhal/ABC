@@ -99,7 +99,7 @@ class Solution {
         int rows = matrix.length; int cols = matrix[0].length;        
         boolean no_zeros_in_dummy_col = true;  
         
-        
+                
          for(int r=0; r<rows; r++)
             if(matrix[r][0]==0)
                 no_zeros_in_dummy_col = false;
@@ -113,6 +113,7 @@ class Solution {
             if(matrix[0][c]==0)
                 matrix[0][0]=0;      
         
+        // mark the dummy row and column as 0 if the cell is 0
         for(int r=1; r<rows; r++)
         {
             for(int c=1; c<cols; c++)
@@ -120,6 +121,8 @@ class Solution {
                     matrix[0][c] =matrix[r][0] = 0;                  
         }
 
+        
+        // Traverse Backwards and mark the cell 0 if dummy col or dummy row is  0
         for(int r=rows-1; r>=1; r--)
         {
             for(int c=cols-1; c>=1; c--)
@@ -140,4 +143,36 @@ class Solution {
     }
 }
 
+```
+
+
+Shorter Code :: 
+
+```java
+class Solution {
+    public void setZeroes(int[][] matrix) {
+        
+        int rows = matrix.length; int cols = matrix[0].length;        
+        boolean no_zeros_in_dummy_col = true;
+        
+        for(int r=0; r<rows; r++)
+        {
+            if(matrix[r][0]==0) no_zeros_in_dummy_col = false;
+            for(int c=1; c<cols; c++)
+                if(matrix[r][c]==0)   //dummy_row[c]=0 and dummy_col[r]=0 i.e. 
+                    matrix[0][c] =matrix[r][0] = 0;                  
+        }
+        
+        for(int r=rows-1; r>=0; r--)
+        {
+            for(int c=cols-1; c>=1; c--)
+            {
+                if(matrix[0][c] == 0 ||  matrix[r][0] == 0)
+                    matrix[r][c] = 0;              
+            }
+            if(no_zeros_in_dummy_col == false)  matrix[r][0] = 0;  
+        }
+        
+    }
+}
 ```
