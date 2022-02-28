@@ -31,7 +31,6 @@ Time :: O(N!*N)
 		- till you find an index auch that a[i] < a[i+1]
 		- index1 = i
 
-		5
-     3     4
-   1          2
+<img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/next_permutation.PNG" width="100" height="50">
+
 
