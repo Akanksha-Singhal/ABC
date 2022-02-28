@@ -49,4 +49,4 @@ Time :: O(N!*N)
 
 ###### Step 4
  - reverse everything from n-1 to index2
- <img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/next_permutation_4.PNG" width="200" height="100">
+ <img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/next_permutation_4.PNG" width="500" height="400">
