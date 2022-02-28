@@ -34,9 +34,19 @@ Time :: O(N!*N)
 
 <img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/next_permutation.PNG" width="100" height="50">
 
-###### Step 1
+###### Step 2
 	- again linearly traverse it from the back
 		- till you find an index auch that a[j] > a[index1]
 		- index2 = j
 
 <img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/next_permutation_2.PNG" width="200" height="100">
+
+
+###### Step 3
+
+ - swap values at index1 and index2
+<img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/next_permutation_3.PNG" width="200" height="100">
+
+###### Step 4
+ - reverse everything from n-1 to index2
+ <img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/next_permutation_4.PNG" width="200" height="100">
