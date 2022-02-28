@@ -39,4 +39,4 @@ Time :: O(N!*N)
 		- till you find an index auch that a[j] > a[index1]
 		- index2 = j
 
-<img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/next_permutation_2.PNG" width="150" height="100">
+<img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/next_permutation_2.PNG" width="200" height="100">
