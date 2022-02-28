@@ -1,7 +1,7 @@
 ## Maximum value of difference of a pair of elements and their Index 
 
 #### Source :: https://practice.geeksforgeeks.org/problems/maximum-value-of-difference-of-a-pair-of-elements-and-their-index/1
-
+#### Source :: https://www.interviewbit.com/problems/maximum-absolute-difference/
 ```
 Given an array arr[] of N positive integers. Find maximum value of |arr[i] – arr[j]| + |i – j|, (0 <= i, j <= N – 1)
 
