@@ -27,10 +27,16 @@ Time :: O(N!*N)
 	- return the combination at (index+1)%n
 	
 #### Optimal Approach :: uses linear time complexity
+###### Step 1
 	- given this string or an array, linearly traverse it from the back
 		- till you find an index auch that a[i] < a[i+1]
 		- index1 = i
 
 <img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/next_permutation.PNG" width="100" height="50">
 
+###### Step 1
+	- again linearly traverse it from the back
+		- till you find an index auch that a[j] > a[index1]
+		- index2 = j
 
+<img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/next_permutation_2.PNG" width="100" height="50">
