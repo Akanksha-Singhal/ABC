@@ -26,4 +26,12 @@ Time :: O(N!*N)
 	- linearly iterate and check which combination at which index is the given combination 
 	- return the combination at (index+1)%n
 	
+#### Optimal Approach :: uses linear time complexity
+	- given this string or an array, linearly traverse it from the back
+		- till you find an index auch that a[i] < a[i+1]
+		- index1 = i
+
+		5
+     3     4
+   1          2
 
