@@ -4,6 +4,9 @@ Given an array of integers nums, find the next permutation of nums.
 
 The replacement must be in place and use only constant extra memory.
 
+#### Source :: https://leetcode.com/problems/next-permutation/
+#### Source :: https://youtu.be/LuLCLgMElus
+
 Example 1:
 ```
 Input: nums = [1,2,3]
@@ -51,5 +54,12 @@ This is because all dictionary order increase from back till a certain point
 <img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/next_permutation_3.PNG" width="200" height="100">
 
 ###### Step 4
- - reverse everything from n-1 to index2
+ - reverse everything from n-1 to index1+1
  <img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/next_permutation_4.PNG" width="500" height="500">
+
+ Result - 1 4 2 3 5 
+
+ ###### Edge Case
+ if Index1 = -1 i.e.  for e.g. 5 4 3 2 1
+ do not execute steps 1, 2 and 3
+ but execute step 4 : reverse the permutation :: 1 2 3 4 5 
