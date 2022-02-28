@@ -33,6 +33,9 @@ Time :: O(N!*N)
 		- index1 = i
 
 <img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/next_permutation.PNG" width="100" height="50">
+```
+This is because all dictionary order increase from back till a certain point
+```
 
 ###### Step 2
 	- again linearly traverse it from the back
