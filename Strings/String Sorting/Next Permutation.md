@@ -49,13 +49,12 @@ This is because all dictionary order increase from back till a certain point
 
 
 ###### Step 3
-
  - swap values at index1 and index2
 <img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/next_permutation_3.PNG" width="200" height="100">
 
 ###### Step 4
 - reverse everything from n-1 to index1+1  
- <img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/next_permutation_4.PNG" width="500" height="500">
+ <img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/next_permutation_4.PNG" width="500" height="157">
 
  Result - 1 4 2 3 5 
 
