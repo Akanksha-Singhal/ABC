@@ -62,3 +62,49 @@ This is because all dictionary order increase from back till a certain point
  if Index1 = -1 i.e.  for e.g. 5 4 3 2 1
  do not execute steps 1, 2 and 3
  but execute step 4 : reverse the permutation :: 1 2 3 4 5 
+
+
+ ```java
+ class Solution {
+    
+    public void swap(int a[], int i, int j)
+    {
+        int temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
+    }
+    
+    public void reverse(int a[], int start, int end)
+    {
+        for(int i=0; i<=(end-start)/2; i++)
+        {
+            int temp = a[start+i];
+            a[start+i] = a[end-i];
+            a[end-i] = temp;
+        }
+    }
+    
+    public void nextPermutation(int[] a) {
+        
+        // given the string or an array, linearly traverse from the back
+        int n = a.length;
+        
+        int i = n-2;
+        while(i>=0 && a[i] >= a[i+1]) i--;
+        
+        int index1 = i; // here a[index] < a[index+1]
+        if(index1!=-1)
+        {
+            i = n-1;
+            while(i>0 && a[i] <= a[index1]) i--;
+            int index2 = i;   // here a[index2] > a[index1]
+
+            swap(a, index1, index2);     
+        }       
+           
+        reverse(a, index1+1, n-1);
+        
+        
+    }
+}
+ ```
