@@ -47,6 +47,8 @@ class Solution {
 # Problem Type 1 : Print all the rows of Pascal's Triangle
 #### Source :: https://leetcode.com/problems/pascals-triangle/
 
+#### Approach 1.1 :: Time :: O(N) Space :: O(N)
+
 Given an integer numRows, return the first numRows of Pascal's triangle.
 
 In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:
