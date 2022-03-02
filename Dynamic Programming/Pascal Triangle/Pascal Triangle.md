@@ -19,12 +19,14 @@ In Pascal's triangle, each number is the sum of the two numbers directly above i
 
 <img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/PascalTriangleAnimated2.gif" width="260" height="240">
 
-Approach 3.1 :: Time :: O(N*N) Space :: O(N)
+###### Approach 3.1 :: Time :: O(N*N) Space :: O(N)
 calculate <sup>R-1</sup>C<sub>C-1</sub> for every n element 
+
+
+###### Approach 3.2 :: Time :: O(N) Space :: O(N)
 
 4th Row - 1   <sup>4</sup>C<sub>0</sub>   <sup>4</sup>C<sub>0</sub>(4-0)/(0+1)   <sup>4</sup>C<sub>1</sub>(4-1)/(1+1)    <sup>4</sup>C<sub>2</sub>(4-2)/(2+1)   <sup>4</sup>C<sub>3</sub>(4-3)/(3+1)  
 
-Approach 3.2 :: Time :: O(N) Space :: O(N)
 
 ```java
 class Solution {
