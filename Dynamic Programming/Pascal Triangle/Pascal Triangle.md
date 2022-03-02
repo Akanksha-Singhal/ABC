@@ -65,20 +65,18 @@ Output: [[1]]
 class Solution {
     public List<List<Integer>> generate(int numRows) {
         
-        List<List<Integer>> al = new ArrayList<List<Integer>>();       
+        List<List<Integer>> al = new ArrayList<List<Integer>>();
         
         for(int i=0; i<numRows; i++)
         {
             List<Integer> list = new ArrayList<Integer>();
-            // at n'th row , Pascal's Triangle always has n- columns
             for(int j=0; j<=i; j++)
             {
-                // For the first column and last column in a row the value is always 1
                 if(j==0||i==j)
                     list.add(1);
                 else
                 {
-                    int num1 = al.get(i-1).get(j-1) : prev;
+                    int num1 = al.get(i-1).get(j-1);
                     int num2 = al.get(i-1).get(j);
                     int sum = num1+num2;
                     list.add(sum);
@@ -87,7 +85,8 @@ class Solution {
             
             al.add(list);
         }
-        return al;        
+        return al;
+        
     }
 }
 ```
