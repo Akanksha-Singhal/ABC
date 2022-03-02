@@ -7,8 +7,8 @@ Youtube :: https://youtu.be/6FLvhQjZqvM
 Given an integer rowIndex and columnIndex, return the element at that part of the Pascal's triangle. (0-indexed)
 
 #### Approach :: Time :: O(N) Space :: O(1)
-given an index R, C
-<sup>R-1</sup>C<sub>C-1</sub>
+given an index R, C  
+value in Pascal Triangle is <sup>R-1</sup>C<sub>C-1</sub>
 
 
 # Problem Type 3 : Print the n'th row of Pascal's Triangle
@@ -22,7 +22,7 @@ In Pascal's triangle, each number is the sum of the two numbers directly above i
 Approach 3.1 :: Time :: O(N*N) Space :: O(N)
 calculate <sup>R-1</sup>C<sub>C-1</sub> for every n element 
 
-4th Row - 1   <sup>4</sup>C<sub>0</sub> <sup>4</sup>C<sub>0</sub>(4-0)/(0+1) <sup>4</sup>C<sub>1</sub>(4-1)/(1+1)  <sup>4</sup>C<sub>2</sub>(4-2)/(2+1) <sup>4</sup>C<sub>3</sub>(4-3)/(3+1)  
+4th Row - 1   <sup>4</sup>C<sub>0</sub>   <sup>4</sup>C<sub>0</sub>(4-0)/(0+1)   <sup>4</sup>C<sub>1</sub>(4-1)/(1+1)    <sup>4</sup>C<sub>2</sub>(4-2)/(2+1)   <sup>4</sup>C<sub>3</sub>(4-3)/(3+1)  
 
 Approach 3.2 :: Time :: O(N) Space :: O(N)
 
