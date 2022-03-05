@@ -9,3 +9,22 @@ that is smaller than arr, that can be made with exactly one swap
  If it cannot be done, then return the same array.
 
  <img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/Previous_Permutation_in_one_swap.PNG" width="94" height="346">
+
+ Example 1:
+```
+Input: arr = [3,2,1]
+Output: [3,1,2]
+Explanation: Swapping 2 and 1.
+```
+Example 2:
+```
+Input: arr = [1,1,5]
+Output: [1,1,5]
+Explanation: This is already the smallest permutation.
+```
+Example 3:
+```
+Input: arr = [1,9,4,6,7]
+Output: [1,7,4,6,9]
+Explanation: Swapping 9 and 7.
+```
