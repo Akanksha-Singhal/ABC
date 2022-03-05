@@ -8,4 +8,4 @@ that is smaller than arr, that can be made with exactly one swap
 
  If it cannot be done, then return the same array.
 
- <img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/next_permutation.PNG" width="94" height="346">
+ <img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/Previous_Permutation_in_one_swap.PNG" width="94" height="346">
