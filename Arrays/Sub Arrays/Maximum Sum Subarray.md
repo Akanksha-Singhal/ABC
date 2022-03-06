@@ -1,4 +1,4 @@
-## Maximum Subarray
+## Maximum Subarray or Kadane's Algorithm
 
 #### Source :: https://leetcode.com/problems/maximum-subarray/
 
@@ -21,6 +21,34 @@ Example 3:
 ```
 Input: nums = [5,4,-1,7,8]
 Output: 23
+```
+
+Solution 1: Naive Approach 
+
+Approach: Time :: O(N<sup>3</sup>)  Space :: O(1)
+Using three for loops, we will get all possible subarrays in two loops and their sum in another loop, and then return the maximum of them.
+
+
+Approach 2 :: Time :: O(n2) Space :: O(1)
+
+
+check [0, n-1], considering 0 to be a starting point, find the ending point for maxSum
+then [1, n-1], ..
+```java
+int maxSubArray(int[] nums) {
+  int max_sum = Integer,MIN_VALUE;
+  for (int i = 0; i < nums.length; i++) {
+    int curr_sum = 0;
+    for (int j = i; j < nums.length; j++) {
+      curr_sum += nums[j];
+      if (curr_sum > max_sum) {
+      // subarray (i, j) is the max subArray
+        max_sum = curr_sum;
+      }
+    }
+  }
+  return max_sum;
+}
 ```
 
 Approach Optimal :: Time :: O(N) Space :: O(1)
