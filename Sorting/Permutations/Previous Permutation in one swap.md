@@ -28,3 +28,44 @@ Input: arr = [1,9,4,6,7]
 Output: [1,7,4,6,9]
 Explanation: Swapping 9 and 7.
 ```
+
+```java
+class Solution {
+    public void swap(int a[], int i, int j)
+    {
+        int temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
+    }
+    
+    public void reverse(int a[], int start, int end)
+    {
+        for(int i=0; i<=(end-start)/2; i++)
+        {
+            int temp = a[start+i];
+            a[start+i] = a[end-i];
+            a[end-i] = temp;
+        }
+    }
+    
+    public int[] prevPermOpt1(int[] a) {
+        // given the string or an array, linearly traverse from the back
+        int n = a.length;
+        
+        int i = n-2;
+        while(i>=0 && a[i] <= a[i+1]) i--;
+        
+        int index1 = i; // here a[index] > a[index+1]
+        if(index1!=-1)
+        {
+            int index2 = index1+1;
+            for(int j=index1+1; j<n; j++)
+                if(a[j] > a[index2] && a[j]<a[index1])
+                    index2 = j;
+                    
+            swap(a, index1, index2);     
+        }
+        return a;
+    }
+}
+```
