@@ -20,7 +20,7 @@ Output: 0
 Explanation: In this case, no transactions are done and the max profit = 0.
 ```
 
- Approach :: Refer to Question Maximum difference between two elements such that larger element appears after the smaller number
+ Approach :: Refer to Question Maximum difference between two elements such that larger element appears after the smaller number  
               Time :: O(n)    Space :: O(1)
 
 
