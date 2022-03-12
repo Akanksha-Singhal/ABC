@@ -2,6 +2,8 @@
 
 #### Source :: https://practice.geeksforgeeks.org/problems/merge-sort/1
 
+Time :: O(NlogN)    Space :: O(N)
+
 ```java
  static void mergeSort(int arr[], int l, int r)
     {
