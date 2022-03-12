@@ -1,6 +1,7 @@
 ## Merge Intervals
 
 Source :: https://leetcode.com/problems/merge-intervals/
+Source :: https://www.interviewbit.com/problems/merge-overlapping-intervals/
 
 Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, 
 and return an array of the non-overlapping intervals that cover all the intervals in the input.
@@ -46,6 +47,7 @@ e.g. [[1,3],[2,6],[8,10],[8,9],[9,11],[15,18],[2,4],[16,17]]
 			- i = j
 	- j++
   
+#### Leetcode Solution
 ```java
 class Solution {
     public int[][] merge(int[][] intervals) {
@@ -86,4 +88,59 @@ class Solution {
         
     }
 }
+```
+
+### Interview Bit Solution
+
+```java
+/**
+ * Definition for an interval.
+ * public class Interval {
+ *     int start;
+ *     int end;
+ *     Interval() { start = 0; end = 0; }
+ *     Interval(int s, int e) { start = s; end = e; }
+ * }
+ */
+class SortIntervals implements Comparator<Interval>
+{
+    // Used for sorting in ascending order of
+    public int compare(Interval a, Interval b)
+    {
+        return a.start - b.start;
+    }
+}
+public class Solution {
+    
+    public ArrayList<Interval> merge(ArrayList<Interval> intervals) {
+        
+        ArrayList<Interval> res = new ArrayList<Interval>();
+        
+        if(intervals==null || intervals.size()==0)
+            return res;
+        
+        Collections.sort(intervals, new SortIntervals());
+        
+        int merged_int_start = intervals.get(0).start;
+        int merged_int_end = intervals.get(0).end;
+        
+        
+        
+        for(Interval interval : intervals)
+        {
+            if(interval.start <= merged_int_end)
+                merged_int_end = Math.max(merged_int_end, interval.end);
+            else
+            {
+                res.add(new Interval(merged_int_start, merged_int_end));
+                merged_int_start = interval.start;
+                merged_int_end = interval.end;
+            }
+        }
+        res.add(new Interval(merged_int_start, merged_int_end));
+        return res;
+
+    }
+}
+
 ```
