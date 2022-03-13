@@ -31,8 +31,8 @@ ar1[] = {1, 2, 3, 5, 8, 9}
 ar2[] = {10, 13, 15, 20}
 ```
 
-### Assumption :: Extra Space is Allowed
-### Approach:: 
+#### Assumption :: Extra Space is Allowed
+#### Approach:: 
 #####  Time :: O((M+N)log(M+N)) {Sorting} + O(M) {Iteration of Array 1} +O(N) {Iteration of array 2}
 ##### Space :: O(M+N)
 
