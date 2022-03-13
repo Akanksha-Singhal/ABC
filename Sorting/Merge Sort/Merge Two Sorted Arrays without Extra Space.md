@@ -74,7 +74,6 @@ class Solution
 {
     public static void swap(long a1[], int i, long a2[], int j)
     {
-       // System.out.println(a1[i]+"--"+a2[j]);
         long temp = a1[i];
         a1[i] = a2[j];
         a2[j] = temp;
