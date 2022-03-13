@@ -5,7 +5,7 @@ Merge them in sorted order.
 Modify arr1 so that it contains the first N elements and 
 modify arr2 so that it contains the last M elements.
 
-Source :: https://leetcode.com/problems/merge-sorted-array/
+Source :: https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays-1587115620/1
 
 Input: 
 ```
@@ -64,5 +64,55 @@ class Solution
     }
 }
 
+
+```
+
+#### Gap Algorithm
+
+```java
+class Solution
+{
+    public static void swap(long a1[], int i, long a2[], int j)
+    {
+       // System.out.println(a1[i]+"--"+a2[j]);
+        long temp = a1[i];
+        a1[i] = a2[j];
+        a2[j] = temp;
+    }
+   
+    //Function to merge the arrays.
+    public static void merge(long a1[], long a2[], int n, int m) 
+    {
+       int gap = (m+n+1)/2;
+
+       while(gap!=0)
+       {
+           int i=0, j = gap;
+           while(j<n+m)
+           {
+               if(i<n && j<n && a1[i]>a1[j])
+               {
+                   swap(a1, i, a1, j);
+               }
+               else if(i<n && j>=n  && a1[i]>a2[j-n])
+               {
+                   swap(a1, i, a2, j-n);
+               }
+               else if(i>=n && j>=n && a2[i-n]>a2[j-n])
+               {
+                   swap(a2, i-n, a2, j-n);
+               }
+               i++; j++;
+           }
+           
+           if(gap==1)
+                gap =0;
+           else
+                gap = (int)Math.ceil(gap/2.0);
+       }
+       
+       
+    }
+}
 
 ```
