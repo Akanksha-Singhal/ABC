@@ -1,5 +1,7 @@
 ## Sort a Binary Array in Linear Time
 
+#### Source :: https://www.interviewbit.com/old/problems/segregate-0s-and-1s-in-an-array/
+
 You are given an array of 0s and 1s in random order. Segregate 0s on left side and 1s on right side of the array 
 [Basically you have to sort the array]. Traverse array only once.
 
