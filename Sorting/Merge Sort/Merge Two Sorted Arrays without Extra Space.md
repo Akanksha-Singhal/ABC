@@ -1,6 +1,7 @@
 ## Merge two Sorted Arrays Without Extra Space
 
 Source :: https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays-1587115620/1
+Source :: https://www.youtube.com/watch?v=hVl2b3bLzBw&list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&index=5
 
 
 Problem statement: Given two sorted arrays arr1[] and arr2[] of sizes n and m in non-decreasing order. 
@@ -39,7 +40,14 @@ ar2[] = {10, 13, 15, 20}
 we could take an array of size M+N, sort it and place the elements back in original arrays
 
 #### Assumption :: Extra Space is not allowed
-#### Approach :: Time:: O(N*M) Space
+#### Approach :: Time:: O(N*M) Space :: O(1)
+
+Time :: O(N*M) = {(Iterating through every element of arr1)*(Reorder of the 2nd array)}
+
+- We can think of iterating through arr1
+- Whenever we encounter an element i.e. greater than the first element of arr2
+    - swap it
+    - Rearrange and insert the swapped element in arr2 in a sorted manner [use insertion sort]
 
 ```java
 class Solution
@@ -80,6 +88,11 @@ class Solution
 ```
 
 #### Gap Algorithm
+Time :: O(log<sub>2</sub>N)*O(N)  { No of of times we perform the gap operation * one whole iteration}
+Space :: O(1)
+
+##### Watch video or notes for better explaination
+
 
 ```java
 class Solution
@@ -94,7 +107,7 @@ class Solution
     //Function to merge the arrays.
     public static void merge(long a1[], long a2[], int n, int m) 
     {
-       int gap = (m+n+1)/2;
+       int gap = (m+n+1)/2; // takes the ceil of (M+N)/2.0
 
        while(gap!=0)
        {
