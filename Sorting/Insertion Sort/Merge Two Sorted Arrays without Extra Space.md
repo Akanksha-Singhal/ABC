@@ -2,10 +2,10 @@
 
 #### Source :: https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays-1587115620/1
 
-We are given two sorted arrays.
-We need to merge these two arrays such that
-initial numbers after complete sorting are in the first array.
-Extra space allowed is O(1)
+We are given two sorted arrays.  
+We need to merge these two arrays such that  
+initial numbers after complete sorting are in the first array.  
+Extra space allowed is O(1)  
 
 Eg. 
 ```
