@@ -82,18 +82,18 @@ public static void swap(long a1[], int i, long a2[], int j)
         int i=0, j=0;
         for(i=0; i<n; i++)
         {
-            if(a1[i]>=a2[j]) 
+            if(a1[i]>=a2[j]) // if the first element in arr2 is less than curr element in arr 1 
             {
                 swap(a1, i, a2, j);
                 
-                long temp = a2[j];
+                long temp = a2[j];  // insert the newly swapped element into its correct position using insertion sort
                 while(j<m-1 && temp>a2[j+1])
                 {
                     a2[j] = a2[j+1];
                     j++;
                 }
                 a2[j] = temp;
-                j=0;
+                j=0; // compare again with the first element of arr 2
             }
         }
     }
