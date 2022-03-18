@@ -1,6 +1,7 @@
 ## Merge Two SORTED Arrays withouut Extra Space
 
 #### Source :: https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays-1587115620/1
+#### Source :: https://www.youtube.com/watch?v=hVl2b3bLzBw
 
 We are given two sorted arrays.  
 We need to merge these two arrays such that  
@@ -103,15 +104,16 @@ public static void swap(long a1[], int i, long a2[], int j)
 Time :: O(log<sub>2</sub>N)*O(N)   
 {(No. of times we perform the gap operations)*O(N)}  
 
+- Imagine arr1[M] and arr2[N] is a single array a[]
 - gaps = Math.ceil((M+N)/2.0)  
-- swaps a[i] --- a[i + gap]
-- gaps = gaps/2
+- swaps a[k] --- a[k + gap] if (a[k] > a[k+gap])
+- gaps = gaps/2.0
 - do while gaps == 0
 
-{(1), 4,  7,  8, (10)}   { 2,  3,  9 }  
-{ 1, (4), 7,  8,  10 }   {(2), 3,  9 }  
-{ 1,  4, (7), 8,  10 }   { 2, (3), 9 }  
-{ 1,  4,  7, (8), 10 }   { 2,  3, (9)}  
+k=0 {(1), 4,  7,  8, (10)}   { 2,  3,  9 }  
+k=1 { 1, (4), 7,  8,  10 }   {(2), 3,  9 }  
+k=2 { 1,  4, (7), 8,  10 }   { 2, (3), 9 }  
+k=3 { 1,  4,  7, (8), 10 }   { 2,  3, (9)}  
 
 
 ```java
