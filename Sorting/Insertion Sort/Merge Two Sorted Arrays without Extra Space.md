@@ -64,3 +64,96 @@ a2 = {(7), 8, 9}
 7<10 hence no swap 
 
 we reached the end of the a1, hence we stop
+
+
+```java
+public static void swap(long a1[], int i, long a2[], int j)
+    {
+        long temp = a1[i];
+        a1[i] = a2[j];
+        a2[j] = temp;
+    }
+    //Function to merge the arrays.
+    public static void merge(long a1[], long a2[], int n, int m) 
+    {
+        // code here 
+        int i=0, j=0;
+        for(i=0; i<n; i++)
+        {
+            if(a1[i]>=a2[j]) 
+            {
+                swap(a1, i, a2, j);
+                
+                long temp = a2[j];
+                while(j<m-1 && temp>a2[j+1])
+                {
+                    a2[j] = a2[j+1];
+                    j++;
+                }
+                a2[j] = temp;
+                j=0;
+            }
+        }
+    }
+```
+## Gaps Algorithm
+
+Time :: O(log<sub>2</sub>N)*O(N)   
+{(No. of times we perform the gap operations)*O(N)}  
+
+- gaps = Math.ceil((M+N)/2.0)  
+- swaps a[i] --- a[i + gap]
+- gaps = gaps/2
+- do while gaps == 0
+
+{(1), 4,  7,  8, (10)}   { 2,  3,  9 }  
+{ 1, (4), 7,  8,  10 }   {(2), 3,  9 }  
+{ 1,  4, (7), 8,  10 }   { 2, (3), 9 }  
+{ 1,  4,  7, (8), 10 }   { 2,  3, (9)}  
+
+
+```java
+class Solution
+{
+    public static void swap(long a1[], int i, long a2[], int j)
+    {
+        long temp = a1[i];
+            a1[i] = a2[j];
+            a2[j] = temp;
+    }
+   
+    //Function to merge the arrays.
+    public static void merge(long a1[], long a2[], int n, int m) 
+    {
+       int gap = (int)Math.ceil((m+n)/2.0);;
+
+       while(gap!=0)
+       {
+           int i=0, j = gap;
+           while(j<n+m)
+           {
+               if(i<n && j<n && a1[i]>a1[j])
+               {
+                   swap(a1, i, a1, j);
+               }
+               else if(i<n && j>=n  && a1[i]>a2[j-n])
+               {
+                   swap(a1, i, a2, j-n);
+               }
+               else if(i>=n && j>=n && a2[i-n]>a2[j-n])
+               {
+                   swap(a2, i-n, a2, j-n);
+               }
+               i++; j++;
+           }
+           
+           if(gap==1)
+                gap =0;
+           else
+                gap = (int)Math.ceil(gap/2.0);
+       }
+       
+       
+    }
+}
+```
