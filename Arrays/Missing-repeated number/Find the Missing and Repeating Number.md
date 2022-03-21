@@ -23,7 +23,7 @@ where A repeats twice and B is missing.
 sum 1 to n = sum(1+2+3+..+n) = ((n)*(n+1))/2  
 sum of squares of 1 to n = 1<sup>2</sup> +  2<sup>2</sup> +  3<sup>2</sup> + ... +  n<sup>2</sup> = (n*(n+1)*(2*n+1))/6  
 
- <img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/repeat_and_missing_2.PNG" width="842" height="1280">
+ <img src="https://github.com/Akanksha-Singhal/ABC/blob/master/Uploads/repeat_and_missing_2.jpeg" width="842" height="1280">
 
 
 
