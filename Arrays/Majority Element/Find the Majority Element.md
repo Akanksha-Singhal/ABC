@@ -16,7 +16,7 @@ Output: 2
 ```
 
 
-Approach 1 :: Brute Force Solution :: Time :: O(n2)
+#### Approach 1 :: Brute Force Solution :: Time :: O(n2)
 ```
 - Find the frequency of the each element in the first half 
 -   for(int i=0; i<n/2; i++)
@@ -25,11 +25,11 @@ Approach 1 :: Brute Force Solution :: Time :: O(n2)
     }
 ```
 
-Approach 2 :: Hashing :: Time O(n) Space O(n)
+#### Approach 2 :: Hashing :: Time O(n) Space O(n)
  - to store each element's frequency
 
 
-Approach 3 :: Boyer-Moore's Majority Vote Algorithm :: Time O(n) Space O(1)
+#### Approach 3 :: Boyer-Moore's Majority Vote Algorithm :: Time O(n) Space O(1)
 
 This solution is called Boyer-Moore's Majority Vote Algorithm
 Approach or Idea::
