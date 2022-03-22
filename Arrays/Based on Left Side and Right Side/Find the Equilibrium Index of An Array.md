@@ -1,7 +1,7 @@
 ## Find Equilibrium Index of an array
 #### Source :: https://leetcode.com/problems/find-pivot-index/
 
-For an array consisting of n elements, index i is equilibrium index
+For an array consisting of n elements, index i is equilibrium index  
 if sum of elements of subarray A[0...i-1] = sum of elements of subarray A[i+1...n-1] 
 
 E.g. 
