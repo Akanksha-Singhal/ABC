@@ -14,7 +14,8 @@ Output: The duplicate element is 2
 ```
 #### Approach 1 : Hashing :: Time O(n), Space O(n)
 
-#### Approach 2 : Check for duplicates by marking the array elements as 
+#### Approach 2 : Time : O(N) Space : O(1) -> Elements Modified
+Check for duplicates by marking the array elements as 
 -ve by using array index as key
 
 	- Array contains all distinct elements but one
@@ -40,7 +41,7 @@ Output: The duplicate element is 2
 ```
 ** Note : The above mentioned Approach works when the array has non-zero non-negative elements.
 
-Approach 3: XOR   Time :: O(n) Space : O(n)
+#### Approach 3: XOR   Time :: O(n) Space : O(1)
 Take the XOR of all array elements from 1 to n-1. Since the same elements will cancel out
 each other. We will be left with the Duplicate Element
 
@@ -58,9 +59,9 @@ int findDuplicate(int a[], int n)
 	return xor;
 }
 ```
-Approach 4: Time :: O(n) Space O(1)
+#### Approach 4: Time :: O(n) Space O(1)
 Find    the sum of all the array elements - n*(n-1)/2
-```
+```java
 int findDuplicate(int a[])
 {
 	int sum =0;
