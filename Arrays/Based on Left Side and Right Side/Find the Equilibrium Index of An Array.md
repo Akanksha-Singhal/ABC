@@ -1,24 +1,27 @@
-Find Equilibrium Index of an array
-Source :: https://leetcode.com/problems/find-pivot-index/
+## Find Equilibrium Index of an array
+#### Source :: https://leetcode.com/problems/find-pivot-index/
 
 For an array consisting of n elements, index i is equilibrium index
 if sum of elements of subarray A[0...i-1] = sum of elements of subarray A[i+1...n-1] 
 
-E.g. arr = [0, -3, 5, -4, -2, 3, 1, 0]
+E.g. 
+```
+arr = [0, -3, 5, -4, -2, 3, 1, 0]
 The  Equilibrium Index is found at index 0, 3 and 7
+```
 
-Approach 1: Brute Force: O(n2)
+#### Approach 1: Brute Force: O(n2)
 
-Approach 2: Linear  Time:: O(n) Space:: O(n) 
+#### Approach 2: Linear  Time:: O(n) Space:: O(n) 
 - calculate sum of elements to the left of each element lsum = new int[n];
 - calculate sum of elements to the right of each element rsum = new int[n];
 - if( lsum[i] == rsum[i])
     return i;
 
-Approach 3: Optimized Solution Time:: O(n) Space:: O(1)
-Sum of left Subarray A[0.. i-1] = total Sum - a[i] -Sum of right Subarray A[i+1.. n] 
+#### Approach 3: Optimized Solution Time:: O(n) Space:: O(1)
+Sum of right Subarray A[i+1.. n] = total Sum - a[i] -Sum of left Subarray A[0.. i-1] 
 
-
+```java
 class Solution {
     public int pivotIndex(int[] nums) {
         int totalSum =0;
@@ -39,3 +42,4 @@ class Solution {
         return -1;
     }
 }
+```
