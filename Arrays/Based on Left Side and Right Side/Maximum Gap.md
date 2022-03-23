@@ -17,15 +17,15 @@ Explanation: In the given array Arr[1] <Arr[7]  satisfying the required conditio
 
 #### Approach -   Time :: O(n) Space :: O(n)
 
-For each element in the array find it's maximum element to it's right - O(n) Space and Time
-Maintain 2 pointers for comparing 2 values 
-	- start with first and second element
-		- Check if we can find a second element equal to higher than itself to right of first element
-			- if second element > first element
-				- mark the gap (j-i)
-				- and keep looking if you can find higher or equal element ahead of second element
-		          i.e. j++
-		- else if no element is higher than first element , increment i
+For each element in the array find it's maximum element to it's right - O(n) Space and Time  
+Maintain 2 pointers for comparing 2 values   
+	- start with first and second element  
+		- Check if we can find a second element equal to higher than itself to right of first element  
+			- if second element > first element  
+				- mark the gap (j-i)  
+				- and keep looking if you can find higher or equal element ahead of second element  
+		          i.e. j++  
+		- else if no element is higher than first element , increment i  
 
 
 ```java
