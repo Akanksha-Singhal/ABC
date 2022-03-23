@@ -92,3 +92,60 @@ e.g. arr[] = {4, 3, 6, 2, 1, 1}
           - Linearly traverse the array to check which one amongst the two is missing no.
 
 
+```java
+
+public class Solution {
+    
+    public int checkBit(int k, int n)
+    {
+        if( (n & 1<<(k-1)) == (1<<(k-1)) )
+            return 1;
+        else
+            return 0;
+    }
+    // DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
+    public int[] repeatedNumber(final int[] a) {
+        
+        int n = a.length;
+        int xor =0;
+        for(int i=0; i<n; i++)
+            xor^=a[i];
+            
+        for(int i=1; i<=n; i++)
+            xor^=i;
+            
+        int bit_pos=0;
+        for(int i=32; i>=0; i--)
+        {
+            if(checkBit(i, xor)==1)
+                {bit_pos = i; break;}
+        }
+
+        int xor1=0, xor2=0;
+        for(int i=0; i<n; i++)
+        {
+            if(checkBit(bit_pos, a[i])==1)
+                xor1^=a[i];
+            else
+                xor2^=a[i];
+        }
+        
+        for(int i=1; i<=n; i++)
+        {
+            if(checkBit(bit_pos, i)==1)
+                xor1^=i;
+            else
+                xor2^=i;
+        }
+        
+        
+        for(int i=0; i<n; i++)
+        {
+            if(a[i]==xor1)
+                {return new int[]{xor1, xor2};}
+        }
+        return new int[]{xor2, xor1};
+    }
+}
+
+```
