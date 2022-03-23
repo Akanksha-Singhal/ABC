@@ -23,9 +23,34 @@ void subarray(int a[])
 		for(int j=i; j<n; j++)
 		{
 			//Print subarray b/w starting and ending point
+			for(int k=i; k<=j; k++)
+				System.out.println(a[k]+" ");
 		}
 	}
 }
 ```
+
+Some Solutions can be minimized to O(n<sup>2</sup>)
+To generate all subarrays O(n<sup>2</sup>)
+
+```java
+
+void subarray(int a[])
+{
+	//Pick starting point
+	for(int i=0; i<n; i++)
+	{
+		ArrayList<Integer> al = new ArrayList<Integer>();
+		//Pick ending point
+		for(int j=i; j<n; j++)
+		{
+			//Print subarray b/w starting and ending point
+			al.add(a[j]);
+			System.out.println(al);
+		}
+	}
+}
+```
+
 
 ## Approach :: 
