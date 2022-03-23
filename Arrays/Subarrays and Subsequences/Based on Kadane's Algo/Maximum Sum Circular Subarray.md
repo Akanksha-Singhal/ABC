@@ -42,3 +42,17 @@ minSubarraySum ( considering null set) = -21
 total SubArraySum = -21
 max subarray sum = -21 - (-21) = 0 (correct !!!)
 ```
+
+### Case 3 :: Some positive, some negative elements
+Consider the array [5 -3 -2 6 -1 4]
+```
+Kadane's maximum subarray sum =  [6 -1 4] = 9 = ans1
+
+Invert - [-5 3 2 -6 1 -4] max subarray sum = 5 
+Therefore for original array ( non-inverted array) min Subarray sum = -5
+total sum = 9
+circular subarray sum = total sum - (min Subarray sum) = 9 - (-5) = 14 = ans2
+i.e. array [6 -1 4 5]
+
+ans - Max(ans1, ans2) = Max(9, 14) = 14
+```
