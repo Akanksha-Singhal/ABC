@@ -18,7 +18,7 @@ where A repeats twice and B is missing.
 
 # We have 2 Optimal Approaches
 
-### Approach 1 :: Mathematical  
+### Approach 1 :: Mathematical   :: Time :: O(N)  Space :: O(1)
 - We know that we have nos. 1 to n
 sum 1 to n = sum(1+2+3+..+n) = ((n)*(n+1))/2  
 sum of squares of 1 to n = 1<sup>2</sup> +  2<sup>2</sup> +  3<sup>2</sup> + ... +  n<sup>2</sup> = (n*(n+1)*(2*n+1))/6  
@@ -63,7 +63,7 @@ public class Solution {
 
 ````
 
-### Approach 1 :: XOR Property
+### Approach 2 :: XOR Property :: Time :: O(N) Space :: O(1)
 
 e.g. arr[] = {4, 3, 6, 2, 1, 1}  
 - Step 1 :: Take the xor of all elements of an array - XOR<sub>1</sub>  
