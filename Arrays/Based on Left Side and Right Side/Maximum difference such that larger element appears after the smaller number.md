@@ -43,7 +43,7 @@ class Solution {
 
 ##### Approach 2  :: maintain rmax
 
-a[i] =            {2, 7, 9, 5, 1, 3, 5}  
+a[i] =   <&nbsp><&nbsp><&nbsp><&nbsp>         {2, 7, 9, 5, 1, 3, 5}  
 rmax[i]=          {9, 9, 9, 5, 5, 5, 5}  
 rmax[i] - a[i] =  {7, 2, 0, 0, 4, 2, 0}  
 
