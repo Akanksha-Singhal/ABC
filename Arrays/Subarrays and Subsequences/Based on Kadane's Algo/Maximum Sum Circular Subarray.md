@@ -56,3 +56,28 @@ i.e. array [6 -1 4 5]
 
 ans - Max(ans1, ans2) = Max(9, 14) = 14
 ```
+### Approach :: Time :: O(n) Space :: O(1)
+
+
+#### To get the max subarray sum considering a Circular array
+	- Get the total sum = total sum  
+	- To get the minimum subarray sum   
+		- apply Kadane on inverted array = ans  
+		- negate the ans i.e ans = -ans  
+
+	- Max Circular Array Sum = totalSum - minimum subarray sum   
+							 = totalSum - (-ans)  
+							 = totalSum +ans = ans1  
+
+#### To get the max subarray sum considering a Normal array 
+	- apply Kadane on normal array = ans2  
+
+#### If null set is not considered   
+	- if ans2 != 0
+		return Max(ans1, ans2)
+	- else
+		return ans1
+
+
+
+
