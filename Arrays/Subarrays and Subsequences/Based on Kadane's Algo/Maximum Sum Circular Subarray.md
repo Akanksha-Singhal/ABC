@@ -33,14 +33,15 @@ max subarray sum = 21 - 0 = 21 (correct !!!)
 ### Case 2 :: All negative Elements 
 Consider the array [-5 -3 -2 -6 -1 -4]
 ```
-minSubarraySum ( atleast one element) = -1
+maxSubArraySum = -1
+minSubarraySum ( atleast one element) = -21
 total SubArraySum = -21
-max subarray sum = -21 - (1-) = -20 (Incorrect !!!)
+max subarray sum = -21 - (-21) = 0 (correct !!!)
 
 -----------------------------------------------
 minSubarraySum ( considering null set) = -21
 total SubArraySum = -21
-max subarray sum = -21 - (-21) = 0 (correct !!!)
+max subarray sum = -21 - (-21) = 0 (correct !!!) [Here note that max Sub Array Sum = 0 using Kadane's]
 ```
 
 ### Case 3 :: Some positive, some negative elements
@@ -77,6 +78,50 @@ ans - Max(ans1, ans2) = Max(9, 14) = 14
 		return Max(ans1, ans2)
 	- else
 		return ans1
+
+
+```java
+
+int maxSubarraySumCircular(int[] nums)
+{
+	int ansStraightArray = kadane(nums);
+	int totalSum = totalSum(nums);
+	invertArray(nums);
+
+	int minSubArrayCircularSum = -1*kadane(nums);
+	int maxSubArrayCircularSum = totalSum - minSubArrayCircularSum;
+
+	if(maxSubArrayCircularSum!=0)
+		return Math.max(ansStraightArray, maxSubArrayCircularSum);
+	else 
+		return ansStraightArray;
+}
+
+void invertArray(int nums[])
+{
+	for(int i=0; i<nums.length; i++)
+		nums[i] = -nums[i];
+}
+
+int totalSum(int nums[])
+{
+	int sum = 0;
+	for(int i=0; i<nums.length; i++)
+		sum+=nums[i];
+	return sum;
+}
+
+int kadane(int nums[])
+{
+	int max = nums[0];
+	int prevMax = Integer.MAX_VALUE;
+	for(int i=0; i<nums.length; i++)
+	{
+
+	}
+}
+
+```
 
 
 
