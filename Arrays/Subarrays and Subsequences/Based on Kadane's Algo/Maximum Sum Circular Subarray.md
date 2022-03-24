@@ -81,44 +81,56 @@ ans - Max(ans1, ans2) = Max(9, 14) = 14
 
 
 ```java
+class Solution {
+    
+    public static void invertArray(int nums[])
+    {
+        for(int i=0; i<nums.length; i++)
+            nums[i] = - nums[i];
+    }
+    
+    public int totalSum(int nums[])
+    {
+        int sum =0;
+        for(int i=0; i<nums.length;i++)
+            sum +=nums[i];
+        return sum;
+    }
+    
+    public static int kadane(int nums[])
+    {
+        int max = nums[0], prevMax = Integer.MIN_VALUE;
+        for(int i=1; i<nums.length; i++)
+        {
+            if(prevMax<max)
+                prevMax = max;
+            if(max + nums[i] < nums[i])
+                max = nums[i];
+            else
+                max = max + nums[i];
+        }
+        return Math.max(prevMax, max);
+    }
+    public int maxSubarraySumCircular(int[] nums) {
+        
+        //applying kadane considering a normal array ( not a circular array)
+        int ans = kadane(nums);
+        
+        //applying kadane considering a circular array
+        // minSubArraySum = -kadane(inverted array)
+        // maxSubArraySum = totalSum - minSubArraySum
+        int totalSum = totalSum(nums);
+        invertArray(nums);
+        int minSubArraySum = -1*kadane(nums);
+        int maxSubArraySum = totalSum - minSubArraySum;
 
-int maxSubarraySumCircular(int[] nums)
-{
-	int ansStraightArray = kadane(nums);
-	int totalSum = totalSum(nums);
-	invertArray(nums);
+        if(maxSubArraySum!=0)
+            return Math.max(ans, maxSubArraySum);
+        else
+            return ans;
+        
 
-	int minSubArrayCircularSum = -1*kadane(nums);
-	int maxSubArrayCircularSum = totalSum - minSubArrayCircularSum;
-
-	if(maxSubArrayCircularSum!=0)
-		return Math.max(ansStraightArray, maxSubArrayCircularSum);
-	else 
-		return ansStraightArray;
-}
-
-void invertArray(int nums[])
-{
-	for(int i=0; i<nums.length; i++)
-		nums[i] = -nums[i];
-}
-
-int totalSum(int nums[])
-{
-	int sum = 0;
-	for(int i=0; i<nums.length; i++)
-		sum+=nums[i];
-	return sum;
-}
-
-int kadane(int nums[])
-{
-	int max = nums[0];
-	int prevMax = Integer.MAX_VALUE;
-	for(int i=0; i<nums.length; i++)
-	{
-
-	}
+    }
 }
 
 ```
