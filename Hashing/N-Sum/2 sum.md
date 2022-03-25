@@ -1,5 +1,7 @@
 ## Find Pair with a given sum
 
+#### Source :: https://leetcode.com/problems/two-sum
+
 Given an array of integers nums and an integer target, 
 return indices of the two numbers such that they add up to target.
 
@@ -55,7 +57,7 @@ void findPair(int a[], int sum)
 ```
 
 
-#### Approach :: Solution using Hashing  Time :: O(n) Space :: O(1)
+#### Approach :: Solution using Hashing  Time :: O(n) Space :: O(n)
 
 ```java
 class Solution {
