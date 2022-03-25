@@ -22,7 +22,7 @@ this number is a COLORFUL number since product of every digit of a sub-sequence 
 Output : 1
 ```
 
-###Approach :: Time O(n<sup>3</sup>)  Space :: O(n)
+### Approach :: Time O(n<sup>3</sup>)  Space :: O(n)
 
 ```java
 public class Solution {
