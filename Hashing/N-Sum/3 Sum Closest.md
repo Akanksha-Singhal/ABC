@@ -19,7 +19,7 @@ Input: nums = [0,0,0], target = 1
 Output: 0
 ```
 
-#### Approach :: Time :: O(n<sup>3</sup>) Space :: O(1)
+#### Approach :: Time :: O(n<sup>2</sup>) Space :: O(1)
 
 ```java
 class Solution {
