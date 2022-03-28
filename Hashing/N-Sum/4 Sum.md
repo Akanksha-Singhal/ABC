@@ -22,6 +22,8 @@ Input: nums = [2,2,2,2,2], target = 8
 Output: [[2,2,2,2]]
 ```
 
+#### Approach :: Time :: O(N<sup>3</sup>) Space :: O(1)
+
 ```java
 class Solution {
     public List<List<Integer>> fourSum(int[] nums, int target) 
