@@ -25,6 +25,9 @@ Output : 0
 ```
 
 #### Approach :: Time :: O(N) Space :: O(n)
+- Create a HashMap (sumTillNow --> first Endpoint where the sumTillNow was found)  
+- if an old sumTillNow-k is found, subarray from [Endpoint of (sumTillNow-k), current index] has sum = k
+
 
 ```java
 class Solution{
