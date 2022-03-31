@@ -1,5 +1,7 @@
 ## Count subarrays with given xor
 
+#### Source :: https://www.interviewbit.com/problems/subarray-with-given-xor/
+
 Given an array of integers A and an integer k.
 Find the total number of subarrays having bitwise XOR of all elements equals to k.
 
