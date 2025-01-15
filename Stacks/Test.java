@@ -26,7 +26,7 @@ class Test
             else if(!s.empty() && s.peek()=='(' && c[i] == ')')
                 { 
                     s.pop();
-                    count +=2;
+                    count +=1;
                 }
              i++;
         }
@@ -35,9 +35,10 @@ class Test
     public static void main(String args[])
     {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string with Parenthesis");
         String str = sc.next();
         int ans = checkPar(str);
-        System.out.println(ans);
+        System.out.println("The string has "+ans+" valid bracket");
         sc.close();
     }
 }
