@@ -5,7 +5,7 @@ Sum Of Digits
 Example 1:
 
 Input: num = 38
-Output: 2
+Output: 11
 Explanation: The process is
 38 --> 3 + 8 --> 11
 
