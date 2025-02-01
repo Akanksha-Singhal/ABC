@@ -1,8 +1,8 @@
 Factorial using Recursion
 
 ```
-// 4 -> 4x3x2x1
-// 5 -> 5x4x3x2x1
+4 -> 4x3x2x1 = 24
+5 -> 5x4x3x2x1 = 120
 ```
 
 
