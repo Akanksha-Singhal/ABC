@@ -29,6 +29,19 @@ Input: n = 2
 Output: 3
 ```
 
+
+```
+       0
+         \
+           1
+       /       \
+      /         \
+   (10)         (11)
+   /   \        /  \
+(100) (101) (110) (111)
+
+```
+
 ```java
 class Solution {
 
@@ -45,8 +58,8 @@ class Solution {
         else
         {
             if(n!=0)
-                count += binary(n<<1, num, '0');
-            count+=binary((n<<1)+1, num, '1');
+                count += binary(n<<1, num, '0'); //Binary(n)+'0'
+            count+=binary((n<<1)+1, num, '1');   //Binary(n)+'1'
         }
     return count;
     }
