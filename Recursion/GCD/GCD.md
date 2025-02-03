@@ -1,5 +1,9 @@
 GCD(a, b)
 
+````
+Greatest Common Divisor for a and b is the largest number that fully divides both a and b
+````
+
 ```java
 public static int gcd(int a, int b)
 {
