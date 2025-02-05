@@ -54,7 +54,7 @@ class Solution {
 
         int count = 1;
         if(lastDigit == '1' && n!=0)
-            count += binary(n<<1, num, '0');
+            count += binary(n<<1, num, '0');   //Binary(n)+'0'
         else
         {
             if(n!=0)

@@ -17,4 +17,5 @@ class Solution
         long res = fact(n);
         System.out.println(res);
     }
+    
 }
