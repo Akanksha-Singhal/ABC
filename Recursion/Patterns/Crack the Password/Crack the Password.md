@@ -1,6 +1,10 @@
 Crack The Password
 
+````
+Given a length l
 Try all possible combinations of numerical passwords of length n 
+Digits of the password are from 1 to 9
+````
 
 Method: Recursion
 
