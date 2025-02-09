@@ -1,3 +1,3 @@
 Index File
 
-[Print Pattern without loop](#/../patterns/print-pattern-without-loop)
+[Print Pattern without loop](https://github.com/Akanksha-Singhal/ABC/tree/master/Recursion/Patterns/Print%20Pattern%20without%20loop)
