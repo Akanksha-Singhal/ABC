@@ -22,7 +22,7 @@ class Solution
     public static void main(String args[])
     {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number of digits");
+        System.out.println("Enter the number of digits ");
         int len = sc.nextInt();
         System.out.println("All possible numerical passwords are :");
         password("", len);
