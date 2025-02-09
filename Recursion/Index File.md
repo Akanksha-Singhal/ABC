@@ -1,3 +1,3 @@
 Index File
 
-[Print Pattern without loop](/Recursion/Patterns/"Print Pattern without loop")
+[Print Pattern without loop](#/recursion/patterns/print-pattern-without-loop)
