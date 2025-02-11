@@ -10,6 +10,8 @@ Index File
 
 [GCD using Recursion](https://github.com/Akanksha-Singhal/ABC/blob/master/Recursion/GCD/GCD.md)
 
+[Binary Nos.](https://github.com/Akanksha-Singhal/ABC/blob/master/Recursion/Patterns/Binary%20Numbers/Binary%20Numbers.md)
+
 [Non Negative Integers with Binary Representations without Consecutive Ones](https://github.com/Akanksha-Singhal/ABC/blob/master/Recursion/Patterns/Binary%20Numbers/Non%20Negative%20Integers%20without%20Consecutive%20Ones/Non%20Negative%20Integers%20without%20Consecutive%20Ones.md)
 
 [Print all Binary Numbers with no consecutive Ones in Lexiographical Order](https://github.com/Akanksha-Singhal/ABC/blob/master/Recursion/Patterns/Binary%20Numbers/Print%20all%20Binary%20Nos/Print%20all%20Binary%20Nos.md)

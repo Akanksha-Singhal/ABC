@@ -1,10 +1,11 @@
 
 
-          1
+         (1)
     /          \
   (10)         (11)
   /   \        /   \
 (100) (101) (110) (111)
+
 
 if the order does not matter then use any approach
 
