@@ -7,6 +7,7 @@ class Solution
         int count =0;
         while(i>=0 && j<str.length())
         {
+            // comparing characters at positions i and j
             if(str.charAt(i)!=str.charAt(j))
                 return count;
             count++;
@@ -21,8 +22,10 @@ class Solution
 
         for(int i=0; i<s.length(); i++)
         {
+            // the center is a single letter (odd length palindromes)
             count += countPalindromesAroundCenter(s, i, i);
 
+            //the center is two letters (even length palindromes)
             if(i!=s.length()-1)
             count += countPalindromesAroundCenter(s, i, i+1);
         }
